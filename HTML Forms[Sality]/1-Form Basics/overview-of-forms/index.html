@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+      <form action="process.php" get="post">
+            <h1>Sign up</h1>
+            
+            <fieldset>
+                <legend><span class="number">1</span>type your info</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="user_email">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </fieldset>
+          
+            <fieldset>    
+                <label>age:</label>
+                <input type="radio" name="age" value="less_than_13" id="less_than_13"><label for="less_than_13" class="light">under 13</label><br>
+
+              <input type="radio" name="age" value="13_or_older" id="13_or_older"><label for="13_or_older" class="light">13 or older</label>
+          </fieldset>
+          
+            <fieldset>
+                <legend><span class="number">2</span>Your profile</legend>
+                <label for="textarea">Add Your Bio:</label>
+                <textarea id="textarea" name="textarea"></textarea>
+            </fieldset>
+          
+            <label for="job">Your Job:</label>
+            <select id="job" name="user_job">
+                <optgroup label="web">    
+                    <option value="frontend_dev">Front End Developer</option>
+                    <option value="backend_dev">Back End Developer</option>
+                    <option value="web_designer">Web Designer</option>
+                </optgroup>
+                
+                <optgroup label="mobile">
+                    <option value="android_dev">Android Developer</option>
+                    <option value="ios_dev">ios Developer</option>
+                    <option value="mobile_designer">Mobile Designer</option>
+                </optgroup>
+                
+                <optgroup label="buisness">
+                    <option value="buisness">Buisness Owner</option>
+                    <option value="freelancer">Freelancer</option>
+                </optgroup>
+            </select>    
+          
+            <fieldset>
+                <label>Interest</label>
+                <input type="checkbox" name="interest" value="web_dev" id="web_dev"><label for="web_dev">Web developer</label>
+              <input type="checkbox" name="interest" value="web_designer" id="web_designer"><label for="web_designer">Web designer</label>
+              <input type="checkbox" name="interest" value="buisness" id="buisness"><label for="buisness">buisness</label>
+          </fieldset>
+          
+          
+          <button type="submit" id="submit">Sign Up</button>
+        </form>
+    </body>
+</html>

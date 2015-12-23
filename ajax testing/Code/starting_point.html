@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+<script>
+$(document).ready(function(){
+	function onDataReceived(data,status,xhr){
+		$('#name').text(data.name);
+		$('#city').text(data.city);
+		$('#weather').text(data.weather.weather);
+		$('#temperature').text(data.weather.temp);
+
+	}
+	
+	function onError(xhr,status,error){
+		console.log(xhr);
+		console.log(stasus);
+		console.log(error);
+		if(xhr.responseJSON.Exception.Message ==  "The AIRPORTCODE parameter to the getAirportStatusByAirportCode function is required but was not passed in."){
+			alert("please type something!");
+			}
+		}
+
+	$('button').click(function(){
+		request =
+		{
+			
+			url:'http://services.faa.gov/airport/status/{code}'
+				.replace('{code}',$('input').val()),
+			
+			type: 'GET',
+			success: onDataReceived,
+			headers: {accept: 'application/json'},
+			error: onError,
+		}
+		
+		$.ajax(request);
+	});
+	
+});
+</script>
+</head>
+	
+<body>
+	
+	<input placeholder="Enter airport code"></input>
+	<button>Get info</button>
+
+	<p>Airport name:</p>
+	<p id="name"></p>
+	<br/>
+	
+	<p>City:</p>
+	<p id="city"></p>
+	<br/>
+	
+	<p>Weather:</p>
+	<p id="weather"></p>
+	<br/>
+	
+	<p>Temperature:</p>
+	<p id="temperature"></p>
+	<br/>
+</body>
+
+</html>

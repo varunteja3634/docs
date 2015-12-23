@@ -1,0 +1,18 @@
+#left {
+	float: left;
+	width: 300px;
+	height: 300px;
+	border: 2px solid black;
+}
+
+#right {
+	float: left;
+	width: 300px;
+	height: 300px;
+	border: 2px solid black;
+}
+
+#pic1 {
+	width : 200px;
+	height: 200px;
+}

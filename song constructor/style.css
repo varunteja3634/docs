@@ -1,0 +1,7 @@
+ol {
+    list-style: none;
+}
+
+.current {
+    list-style: square;
+}

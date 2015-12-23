@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>inheritance</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+aside, article, section, header, footer, nav {
+	display: block;
+}
+/*add styles here*/
+body {
+font-family: georgia;
+font-size: 120%;
+color: green;
+}
+section {
+	color: red;
+	font-size: 1.4em; /*its gonna become bigger than 1.4em becouse it's  relative unit of measurement so it inherits bodys font-size as defalut vlaue*/
+}
+</style>
+</head>
+<body>
+<h1>im a header</h1>
+<section>
+<p>I am a paragraph nested inside a section. I also have a <strong>strong tag</strong> nested inside of me.</p>
+</section>
+<aside>
+<p>I am a paragraph nested inside an aside. I also have a <strong>strong tag</strong> nested inside of me.</p>
+</aside>
+</body>
+</html>
