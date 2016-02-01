@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title></title>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link href='styles/main.css' rel='stylesheet' type="text/css">
+</head>
+<body ng-app="ToDoApp">
+	<h1>My TODOs</h1>
+
+	<div class="list" ng-controller="mainCtrl"> 
+
+		 <a href="" class="add" ng-click="addTodos()">+ add new task</a>
+
+		<div ng-repeat="todo in todos | orderBy: 'completed' : true" class="item" ng-class="{ 'editing': editing, 'edited': edited, 'completed': todo.Completed}" ng-init="todo.Completed = false">
+
+			<input type="checkbox" ng-model="todo.Completed">
+
+			<label ng-hide="editing" class="editing-label">{{ todo.name }}</label>
+			<input type="text" class="editing-label" ng-model="todo.name" ng-show="editing" ng-blur="editing = false;" ng-change="edited = true;">
+
+			<div class="actions">
+				<a href="" ng-click="editing = !editing">edit</a>
+				<a href="" ng-click="hello()">save</a>
+				<a href=""  class="delete">delete</a>
+			</div>
+
+		</div>
+	</div>
+	
+
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
