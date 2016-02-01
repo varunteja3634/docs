@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+}
+
+.grid {
+    margin: 0 auto;
+    align-content: center;
+}
+
+h1,h2{
+   font-weight: normal;
+}
+
+#question{
+    color: darkgray;
+}
+
+#quiz h1{
+    font-size:  3rem;
+    color: lightgrey;
+}
+
+p {
+    font-weight: 600;
+    color: burlywood;
+}
+
+button {
+    color: cadetblue;
+    border: 0;
+    background: aqua;
+    padding: 20px 40px;
+    border-radius: 5px;
+}

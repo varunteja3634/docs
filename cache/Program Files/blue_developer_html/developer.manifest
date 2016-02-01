@@ -1,0 +1,15 @@
+CACHE MANIFEST
+#16-10-2015
+
+#pages you want to be offline
+CACHE:
+index.html
+style.css
+
+#pages that user needs to be  online
+NETWORK:
+login.php
+
+#if something goes wrong the page that should be displayed
+FALLBACk:
+.html error.html
